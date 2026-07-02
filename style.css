@@ -1,0 +1,196 @@
+/* ==========================================================================
+   Configurações Globais e Variáveis (Identidade Visual Proprietária)
+   ========================================================================== */
+:root {
+    --bg-primary: #f4f7f6;
+    --bg-card: #ffffff;
+    --text-color: #2c3e50;
+    --primary-color: #007bcc;
+    --accent-color: #2ecc71;
+    --error-color: #e74c3c;
+    --header-bg: #1a252f;
+    --header-text: #ffffff;
+}
+
+/* Variáveis para o Modo Escuro */
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-card: #1e1e1e;
+    --text-color: #e0e0e0;
+    --primary-color: #3498db;
+    --header-bg: #0a0f14;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+/* ==========================================================================
+   Layout com Flexbox (Header e Componentes)
+   ========================================================================== */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 span {
+    color: var(--primary-color);
+}
+
+/* Botões e Interações (Efeitos Hover Suaves) */
+.btn-accessible {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--header-text);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .btn-accessible {
+    color: var(--text-color);
+}
+
+.btn-accessible:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#btn-submit-quiz {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+#btn-submit-quiz:hover {
+    background-color: #005fa3;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Seções de Conteúdo e Quiz
+   ========================================================================== */
+.hero-section, .info-section, .quiz-section {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-primary);
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quiz-option:hover {
+    background: #e8f4fd;
+}
+
+[data-theme="dark"] .quiz-option:hover {
+    background: #2a2a2a;
+}
+
+/* Feedbacks Dinâmicos do JS */
+#quiz-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.feedback-success {
+    background-color: rgba(46, 204, 113, 0.2);
+    border: 1px solid var(--accent-color);
+    color: #27ae60;
+}
+
+.feedback-error {
+    background-color: rgba(231, 76, 60, 0.2);
+    border: 1px solid var(--error-color);
+    color: #c0392b;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* ==========================================================================
+   Responsividade (CSS Media Queries)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .header-flex {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .hero-section, .info-section, .quiz-section {
+        padding: 20px;
+    }
+}
