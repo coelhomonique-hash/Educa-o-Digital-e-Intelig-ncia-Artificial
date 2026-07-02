@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Segura | Cidadania Digital e IA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <h1>Conexão<span>Segura</span></h1>
+            <button id="toggle-dark-mode" class="btn-accessible" aria-label="Alternar modo escuro">🌓 Modo Escuro</button>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="hero-section">
+            <h2>Cidadania Digital na Era da Inteligência Artificial</h2>
+            <p>A tecnologia avança rapidamente, e com ela surgem novos desafios. Entender o impacto das <strong>deepfakes</strong> e da desinformação automatizada é o primeiro passo para navegar na internet de forma ética e segura.</p>
+        </section>
+
+        <hr>
+
+        <section class="info-section">
+            <h2>O Perigo das Deepfakes</h2>
+            <p>Deepfakes são vídeos, áudios ou imagens alterados de forma realista por meio de Inteligência Artificial. Elas podem ser usadas para espalhar notícias falsas, arruinar reputações e manipular a opinião pública. Fique atento aos detalhes: piscadas não naturais, falhas na iluminação e áudios dessincronizados são indícios de manipulação.</p>
+        </section>
+
+        <hr>
+
+        <section class="quiz-section">
+            <h2>Desafio: Quiz Anti-Desinformação</h2>
+            <p>Teste suas habilidades! Uma IA gerou uma foto de um acontecimento bombástico que nenhum canal de jornalismo grande noticiou. O que você faz?</p>
+            
+            <form id="quiz-form">
+                <div class="quiz-options">
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz-answer" value="errado">
+                        <span>Compartilho imediatamente no grupo da família para alertar a todos.</span>
+                    </label>
+                    
+                    <label class="quiz-option">
+                        <input type="radio" name="quiz-answer" value="correto">
+                        <span>Desconfio, procuro em fontes confiáveis e analiso se há distorções na imagem.</span>
+                    </label>
+                </div>
+                <button type="button" id="btn-submit-quiz">Verificar Resposta</button>
+            </form>
+            
+            <div id="quiz-feedback" class="hidden"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Projeto de Educação Digital e Computação. Desenvolvido para fins educacionais.</p>
+            <p>Hashtag do Projeto: <strong>#cidadaniadigital2026</strong></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
