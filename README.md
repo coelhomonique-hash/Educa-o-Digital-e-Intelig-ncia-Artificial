@@ -1,1 +1,1 @@
-# Educa-o-Digital-e-Intelig-ncia-Artificial
+# Educacao-Digital-e-Inteligencia-Artificial
